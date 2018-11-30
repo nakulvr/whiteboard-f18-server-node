@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c1331d-06a7-44e7-bb40-565e96f025cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/whiteboard-f18-server-node.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/enrollment.dao.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/section.dao.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/student.dao.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/user.dao.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/answer.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/answer.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/enrollment.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/enrollment.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/multiple-choice.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/question.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/question.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/quiz-widget.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/quiz-widget.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/section.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/section.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/student.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/student.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/true-false.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/user.model.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/user.schema.server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/student.service.server.js" afterDir="false" />
-    </list>
+    <list default="true" id="01c1331d-06a7-44e7-bb40-565e96f025cf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -70,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../A5/whiteboard-fall-2018-client-react/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="46">
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -190,12 +158,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543337218465</updated>
-      <workItem from="1543337220166" duration="28439000" />
+      <workItem from="1543337220166" duration="28686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28439000" />
+    <option name="totallyTimeSpent" value="28686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -208,7 +176,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="762" y="0" width="779" height="870" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -404,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../A5/whiteboard-fall-2018-client-react/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="46">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
