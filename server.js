@@ -11,9 +11,18 @@ require('./db/database')();
 const studentService = require('./services/student.service.server');
 studentService(app);
 
-const userDao = require('./dao/user.dao.server');
-const sectionDao = require('./dao/section.dao.server');
-const enrollmentDao = require('./dao/enrollment.dao.server');
+const questionService = require('./services/question.service.server')
+questionService(app);
+
+const universityDao = require('./dao/university.dao.server')
+// const studentDao = require('./dao/student.dao.server')
+// universityDao.truncateDatabase()
+// universityDao.populateDatabase()
+universityDao.truncateAndPopulate()
+
+// const userDao = require('./dao/user.dao.server');
+// const sectionDao = require('./dao/section.dao.server');
+// const enrollmentDao = require('./dao/enrollment.dao.server');
 
 // enrollmentDao.enrollStudentIntoSection('5bffd885a93394f5cffde52c', '5c0052442b623a62c8f745ac').
 //     then(enroll => console.log(enroll));
