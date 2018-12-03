@@ -1,6 +1,7 @@
 // const studentModel = require('../models/student.model.server');
 const studentDao = require('./student.dao.server');
 const questionDao = require('./question.dao.server')
+const answerDao = require('./answer.dao.server')
 const async = require('async')
 createStudent = student =>
     // studentModel.create(student);
@@ -12,14 +13,20 @@ truncateDatabase = () => {
     // return true;
     async.waterfall(
         [
+
             (callback) => {
                 studentDao.truncateStudent()
                     .then(() => callback(null))
             },
             (callback) => {
                 questionDao.truncateQuestion()
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.truncateAnswers()
                     .then(() => callback(null, 'done'))
-            }],
+            }
+        ],
         () => {
             console.log('Truncated databases')
             // populateDatabase()
@@ -43,7 +50,9 @@ populateDatabase = () => {
                             },
                         gradYear: 2020,
                         scholarShip: 15000
-                    }).then(() => callback(null))
+                    }).then(() => {
+                    callback(null)
+                })
             },
             (callback) => {
                 studentDao.createStudent(
@@ -58,7 +67,7 @@ populateDatabase = () => {
                             },
                         gradYear: 2021,
                         scholarShip: 12000
-                    }).then(() => callback(null))
+                    }).then((result) => callback(null))
             },
             (callback) => {
                 questionDao.createQuestion(
@@ -112,7 +121,79 @@ populateDatabase = () => {
                             correct: 4
                         }
                     })
-                    .then(() => callback(null, 'done'))
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    123, 321, {
+                        _id: 123,
+                        trueFalseAnswer: true
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    123, 432, {
+                        _id: 234,
+                        trueFalseAnswer: false
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    123, 543, {
+                        _id: 345,
+                        multipleChoiceAnswer: 1
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    123, 654, {
+                        _id: 456,
+                        multipleChoiceAnswer: 2
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    234, 321, {
+                        _id: 567,
+                        trueFalseAnswer: false
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    234, 432, {
+                        _id: 678,
+                        trueFalseAnswer: true
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    234, 543, {
+                        _id: 789,
+                        multipleChoiceAnswer: 3
+                    }
+                )
+                    .then(() => callback(null))
+            },
+            (callback) => {
+                answerDao.answerQuestion(
+                    234, 654, {
+                        _id: 890,
+                        multipleChoiceAnswer: 4
+                    }
+                )
+                    .then(() => callback(null))
             }
         ], () => console.log('Populated databases'))
 };

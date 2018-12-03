@@ -14,6 +14,9 @@ studentService(app);
 const questionService = require('./services/question.service.server')
 questionService(app);
 
+const answerService = require('./services/answer.service.server')
+answerService(app);
+
 const universityDao = require('./dao/university.dao.server')
 // const studentDao = require('./dao/student.dao.server')
 // universityDao.truncateDatabase()

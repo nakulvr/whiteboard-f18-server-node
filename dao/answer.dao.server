@@ -1,0 +1,60 @@
+const answerModel = require('../models/answer.model.server')
+
+truncateAnswers = () =>
+    answerModel.deleteMany()
+
+answerQuestion = (studentId, questionId, answer) => {
+    answer.student = parseInt(studentId)
+    answer.question = parseInt(questionId)
+    return answerModel.create(answer)
+}
+
+findAllAnswers = () =>
+    answerModel.find()
+        .populate('student')
+        .populate('question')
+        .exec()
+
+findAnswerByStudent = studentId =>
+    answerModel.find({
+        student: {
+            _id: studentId
+        }
+    })
+        .populate('student')
+        .populate('question')
+        .exec()
+
+findAnswerByQuestion = questionId =>
+    answerModel.find({
+        question: {
+            _id: questionId
+        }
+    })
+        .populate('student')
+        .populate('question')
+        .exec()
+
+findAnswerByStudentQuestion = (studentId, questionId) =>
+    answerModel.find({
+        $and: [{
+            student: {
+                _id: parseInt(studentId)
+            }
+        }, {
+            question: {
+                _id: parseInt(questionId)
+            }
+        }
+        ]
+    })
+        .populate('student')
+        .populate('question')
+        .exec()
+
+module.exports = {
+    answerQuestion,
+    findAllAnswers,
+    truncateAnswers,
+    findAnswerByStudentQuestion
+}
