@@ -17,11 +17,13 @@ questionService(app);
 const answerService = require('./services/answer.service.server')
 answerService(app);
 
-const universityDao = require('./dao/university.dao.server')
+const universityService = require('./services/university.service.server')
+universityService(app);
+
 // const studentDao = require('./dao/student.dao.server')
 // universityDao.truncateDatabase()
 // universityDao.populateDatabase()
-universityDao.truncateAndPopulate()
+// universityDao.truncateAndPopulate()
 
 // const userDao = require('./dao/user.dao.server');
 // const sectionDao = require('./dao/section.dao.server');
@@ -71,7 +73,7 @@ app.all('/*', function(req, res, next) {
 //   console.log(req.body);
 //   res.json(req.body)
 // };
-// app.post('/api/course', createCourse);
+// app.post('/api/course', createCourse);`
 
 // app.listen(3000);
 app.listen(process.env.PORT || 8080);

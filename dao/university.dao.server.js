@@ -28,10 +28,12 @@ truncateDatabase = () => {
             }
         ],
         () => {
+            // return 'Truncated databases'
             console.log('Truncated databases')
             // populateDatabase()
         }
     )
+    return 'Truncated databases';
 }
 
 populateDatabase = () => {
@@ -196,6 +198,7 @@ populateDatabase = () => {
                     .then(() => callback(null))
             }
         ], () => console.log('Populated databases'))
+    return 'Populated databases';
 };
 
 createQuestion = question =>
